@@ -1,0 +1,30 @@
+doctype html
+html
+	head
+		title Express Website | #{title}
+		link(rel='stylesheet', href='/stylesheets/style.css')
+		// Bootstrap Core CSS
+		link(href='/stylesheets/bootstrap.min.css', rel='stylesheet')
+		// Custom Fonts
+		link(href='http://maxcdn.bootstrapcdn.com/font-awesome/4.1.0/css/font-awesome.min.css', rel='stylesheet', type='text/css')
+		link(href='http://fonts.googleapis.com/css?family=Lora:400,700,400italic,700italic', rel='stylesheet', type='text/css')     
+		link(href='http://fonts.googleapis.com/css?family=Open+Sans:300italic,400italic,600italic,700italic,800italic,400,300,600,700,800', rel='stylesheet', type='text/css')
+	body
+		nav.navbar.navbar-default
+			.container-fluid
+				.navbar-header
+					a.navbar-brand(href='#') Brand
+				ul.nav.navbar-nav
+					li(class=(title==='Index' ? 'active' : ''))
+						a(href='/') Home
+					li(class=(title==='about' ? 'active' : ''))
+						a(href='/about') About
+					li(class=(title==='contact' ? 'active' : ''))
+						a(href='/contact') Contact
+		div.container
+			h1 Express Website
+
+
+	script(src='/javascripts/jquery.js')
+	script(src='/javascripts/bootstrap.min.js')
+	block content

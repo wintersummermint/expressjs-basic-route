@@ -1,0 +1,24 @@
+extends layout
+
+block content
+	form(method='post',action='contact/send')
+		div.col-lg-12
+			.form-group
+				label(for='InputName') Your Name
+				.input-group
+					input#InputName.form-control(type='text', name='InputName', placeholder='Enter Name', required='')
+					span.input-group-addon
+						i.glyphicon.glyphicon-ok.form-control-feedback
+			.form-group
+				label(for='InputEmail') Your Email
+				.input-group
+					input#InputEmail.form-control(type='email', name='InputEmail', placeholder='Enter Email', required='')
+					span.input-group-addon
+						i.glyphicon.glyphicon-ok.form-control-feedback
+			.form-group
+				label(for='InputMessage') Message
+				.input-group
+					textarea#InputMessage.form-control(name='InputMessage', rows='5', required='')
+					span.input-group-addon
+						i.glyphicon.glyphicon-ok.form-control-feedback
+			input#submit.btn.btn-info.pull-right(type='submit', name='submit', value='Submit')
